@@ -8,10 +8,13 @@ def canUnlockAll(boxes):
     if boxes == 0:
         return False
 
-    if type(boxes) is not list:
+    if not isinstance(boxes, list):
         return False
-    
+
     l = len(boxes)
+
+    if l == 0:
+        return False
 
     check = [0]
     list_ing = [i for i in range(l)]
