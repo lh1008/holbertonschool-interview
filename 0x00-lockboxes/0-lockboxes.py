@@ -11,23 +11,20 @@ def canUnlockAll(boxes):
     if not isinstance(boxes, list):
         return False
 
-    l = len(boxes)
-
-    if l == 0:
+    if len(boxes) == 0:
         return False
 
     check = [0]
-    list_ing = [i for i in range(l)]
+    list_ing = [i for i in range(len(boxes))]
 
-
-    for it_1 in check:
-        for it_2 in boxes[it_1]:
-            if it_2 not in check and it_2 in list_ing:
-                if it_2 >= l:
+    for in_check in check:
+        for in_boxes in boxes[in_check]:
+            if in_boxes not in check and in_boxes in list_ing:
+                if in_boxes >= len(boxes):
                     return False
-                check.append(it_2)
+                check.append(in_boxes)
 
-    if len(check) == l:
+    if len(check) == len(boxes):
         return True
     else:
         return False
