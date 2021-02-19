@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Module that calculates operations """
 
+
 def minOperations(n):
     """
     Method that calculates the fewest number of
