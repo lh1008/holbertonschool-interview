@@ -1,15 +1,21 @@
 #!/usr/bin/python3
-import random
-import sys
-from time import sleep
-import datetime
+""" Module that reads stdin line """
 
-for i in range(10000):
-    sleep(random.random())
-    sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
-        random.randint(1, 255), random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),
-        datetime.datetime.now(),
-        random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
-        random.randint(1, 1024)
-    ))
-    sys.stdout.flush()
+import sys
+
+
+def main():
+    """ Method that prints stdin line by line """
+    output = []
+    for line in sys.stdin:
+        print(line.rstrip())
+        words = line.split()
+        output.append(words[-1])
+        if len(output) == 10:
+            output = list(map(int, output))
+            total = sum(output)
+            print('File size: {}'.format(total))
+
+
+if __name__ == '__main__':
+    main()
