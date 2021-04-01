@@ -27,6 +27,6 @@ True
 False
 ```
 
-Open the `0-main.py` file and check what is being sent to the `def validUTF8(dadta)` method (function).
+Open the `0-main.py` file and check what is being sent to `0-validate_utf8.py` -> `def validUTF8(data)` method (function).
 
 First two list of encoded lists are in the range of `0` to `255`. The last string has `256`, being one number ahead of `255`. The basic Latin-1 Unicode goes up to `255`. If there is a number above of `255` the program returns `False` or `True` if the list of Unicode numbers are below or equal to `255`.
