@@ -10,8 +10,23 @@ def validUTF8(data):
     False: if not
     """
 
-    for item in data:
-        if item < 256:
-            print(chr(item).encode('utf-8'))
-        elif item > 255:
-            return False
+    nbytes = 0
+
+    m1 = 1 << 7
+    m2 = 1 << 6
+
+    for i in data:
+        m = 1 << 7
+        if nbytes == 0:
+            while m & i:
+                nbytes += 1
+                m = m >> 1
+            if nbytes == 0:
+                continue
+            if nbytes == 1 or nbytes > 4:
+                return False
+        else:
+            if not (i & m1 and not (i & m2)):
+                return False
+        nbytes -= 1
+    return nbytes == 0
