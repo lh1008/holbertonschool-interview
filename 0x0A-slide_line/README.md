@@ -30,7 +30,7 @@ Compile using the following command:
 A `0-slide_line` executable will be returned by the compiler. Execute the file with the following commands and see what is the output of every example:
 
 Input:
-`$ ./0-slide_line L 2 2 0 0`
+`$ ./0-slide_line L 2 2 0 0`  
 Output:
 ```
 Line: 2, 2, 0, 0
@@ -38,7 +38,7 @@ Slide to the left
 Line: 4, 0, 0, 0
 ```
 Input:
-`$ ./0-slide_line R 2 2 2 2 2`
+`$ ./0-slide_line R 2 2 2 2 2`  
 Output:
 ```
 Line: 2, 2, 2, 2, 2
@@ -47,7 +47,7 @@ Line: 0, 0, 2, 4, 4
 ```
 
 Input:
-`$ ./0-slide_line L 2 2 0 0 0 0 0 2 0 0 0 2 0 4`
+`$ ./0-slide_line L 2 2 0 0 0 0 0 2 0 0 0 2 0 4`  
 Output:
 ```
 Line: 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 4
