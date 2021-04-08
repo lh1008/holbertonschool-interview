@@ -52,4 +52,12 @@ Slide to the left
 Line: 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ```
 
+Input:
+`$ ./0-slide_line R 2 2 0 0 0 0 0 2 0 0 0 2 0 4`
+```
+Line: 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 4
+Slide to the right
+Line: 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+```
+
 The `'L'` for `left` and the `'R'` for `right` will slide the number to the right or to the left. 
