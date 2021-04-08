@@ -60,4 +60,6 @@ Slide to the right
 Line: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4
 ```
 
-The `'L'` for `left` and the `'R'` for `right` will slide the number to the right or to the left. 
+The `'L'` for `left` and the `'R'` for `right` will slide the number to the right or to the left.
+
+Enjoy `:)`!
