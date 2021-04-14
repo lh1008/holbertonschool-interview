@@ -8,29 +8,29 @@
  */
 void menger(int level)
 {
-	int i = 0, x, j;
-	char p[] = "###\n# #\n###";
-	char pi[] = "#########\n# ## # #\n#########";
-	char pe[] = "###   ###\n# #   # #\n###   ###";
+	int x, y, z, subx, suby;
 
-	if (level < 0)
-	{}
-	if (level == 0)
-		puts("#");
-	else
-		while (i < level)
+	for (y = 0; y < pow(3, level); y++)
+	{
+		for (x = 0; x < pow(3, level); x++)
 		{
-			if (level == 1)
+			subx = x;
+			suby = y;
+			z = 0;
+			while (subx && suby)
 			{
-				printf("%s\n", p);
-				break;
+				if (subx % 3 == 1 && suby % 3 == 1)
+				{
+					printf(" ");
+					z = 1;
+					break;
+				}
+				subx = subx / 3;
+				suby = suby / 3;
 			}
-			else if (level > 1)
-				for (j = 0; j < level; j++)
-					for (x = 0; x < level; x++)
-					{
-						printf("%s\n%s\n%s\n", pi, pe, pi);
-					}
-			++i;
+			if (z == 0)
+				printf("#");
 		}
+		printf("\n");
+	}
 }
