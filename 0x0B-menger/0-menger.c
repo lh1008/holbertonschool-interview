@@ -10,6 +10,8 @@ void menger(int level)
 {
 	int i = 0, x, j;
 	char p[] = "###\n# #\n###";
+	char pi[] = "#########\n# ## # #\n#########";
+	char pe[] = "###   ###\n# #   # #\n###   ###";
 
 	if (level < 0)
 	{}
@@ -27,7 +29,7 @@ void menger(int level)
 				for (j = 0; j < level; j++)
 					for (x = 0; x < level; x++)
 					{
-						printf("%s\n", p);
+						printf("%s\n%s\n%s\n", pi, pe, pi);
 					}
 			++i;
 		}
