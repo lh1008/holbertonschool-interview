@@ -10,27 +10,30 @@ void menger(int level)
 {
 	int x, y, z, subx, suby;
 
-	for (y = 0; y < pow(3, level); y++)
-	{
-		for (x = 0; x < pow(3, level); x++)
+	if (level < 0)
+	{}
+	else if (level >= 0)
+		for (y = 0; y < pow(3, level); y++)
 		{
-			subx = x;
-			suby = y;
-			z = 0;
-			while (subx && suby)
+			for (x = 0; x < pow(3, level); x++)
 			{
-				if (subx % 3 == 1 && suby % 3 == 1)
+				subx = x;
+				suby = y;
+				z = 0;
+				while (subx && suby)
 				{
-					printf(" ");
-					z = 1;
-					break;
+					if (subx % 3 == 1 && suby % 3 == 1)
+					{
+						printf(" ");
+						z = 1;
+						break;
+					}
+					subx = subx / 3;
+					suby = suby / 3;
 				}
-				subx = subx / 3;
-				suby = suby / 3;
+				if (z == 0)
+					printf("#");
 			}
-			if (z == 0)
-				printf("#");
+			printf("\n");
 		}
-		printf("\n");
-	}
 }
