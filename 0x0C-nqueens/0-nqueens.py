@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Module that places a N non-attacking queens on a NxN chessboard
-
 """
 import sys
 
@@ -62,15 +61,19 @@ def main():
     if len(sys.argv) != 2:
         print('Usage: nqueens N')
         sys.exit(1)
-    if sys.argv[1].isdigit():
-        if int(sys.argv[1]) < 4:
+
+    if int(sys.argv[1]) < 4:
             print('N must be at least 4 number')
             sys.exit(1)
-    else:
+
+    try:
+        int(sys.argv[1])
+    except BaseException:
         print('N must be a number')
         sys.exit(1)
 
     nqueens(int(sys.argv[1]))
+
 
 if __name__ == '__main__':
     main()
