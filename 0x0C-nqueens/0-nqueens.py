@@ -6,7 +6,7 @@ Module that places a N non-attacking queens on a NxN chessboard
 import sys
 
 
-def main(n):
+def nqueens(n):
     """
     Method that solves the N queen problem
     6475971141116810111851
@@ -54,24 +54,23 @@ def place_queens(n, queens_pos):
                 place_queens(n, new_queens_pos)
 
 
-if __name__ == '__main__':
+def main():
     """
     Parsed arguments
     6410810449484856
     """
-    if len(sys.argv) <= 2:
-        if len(sys.argv) == 1:
-            print('Usage: nqueens N')
-            sys.exit(1)
-        if sys.argv[1].isdigit():
-            if int(sys.argv[1]) < 4:
-                print('N must be at least 4 number')
-                sys.exit(1)
-        else:
-            print('N must be a number')
-            sys.exit(1)
-    else:
+    if len(sys.argv) != 2:
         print('Usage: nqueens N')
         sys.exit(1)
+    if sys.argv[1].isdigit():
+        if int(sys.argv[1]) < 4:
+            print('N must be at least 4 number')
+            sys.exit(1)
+    else:
+        print('N must be a number')
+        sys.exit(1)
 
-    main(int(sys.argv[1]))
+    nqueens(int(sys.argv[1]))
+
+if __name__ == '__main__':
+    main()
