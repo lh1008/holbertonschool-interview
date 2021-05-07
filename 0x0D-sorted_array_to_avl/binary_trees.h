@@ -2,6 +2,11 @@
 #define BINARY_TREES_H
 
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
 
 /**
  * struct binary_tree_s - Binary tree node
