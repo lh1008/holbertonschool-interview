@@ -34,21 +34,21 @@ void print_check(size_t index, int value)
 /**
  * normal_lane - entry to find one by one
  * Desc: normal_lane function that checks next by next normal lane
- * @head: express line node
+ * @list: express line node
  * @value: value to compare
  * Return: node found
  */
-skiplist_t *normal_lane(skiplist_t *head, int value)
+skiplist_t *normal_lane(skiplist_t *list, int value)
 {
-	skiplist_t *node = head;
+	skiplist_t *node_list = list;
 
-	if (head == NULL)
+	if (list == NULL)
 		printf("n head nullll");
-	for (; node; node = node->next)
+	for (; node_list; node_list = node_list->next)
 	{
-		print_check(node->index, node->n);
-		if (node->n == value)
-			return (node);
+		print_check(node_list->index, node_list->n);
+		if (node_list->n == value)
+			return (node_list);
 	}
 
 	return (NULL);
