@@ -62,11 +62,11 @@ skiplist_t *normal_lane(skiplist_t *head, int value)
  * @value: value to search
  * Return: NULL if value not present or head list NULL or value
  */
-skiplist_t *linear_skip(skiplist_t *head, int value)
+skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	skiplist_t *current  = head, *next = NULL;
+	skiplist_t *current  = list, *next = NULL;
 
-	if (head == NULL)
+	if (list == NULL)
 		return (NULL);
 
 	while (current != NULL)
