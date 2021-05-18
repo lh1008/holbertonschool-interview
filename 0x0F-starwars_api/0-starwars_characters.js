@@ -7,7 +7,7 @@ const consoleArg = process.argv.slice(2);
 const options = {
   hostname: 'swapi-api.hbtn.io',
   port: 443,
-  path: '/api/people/' + consoleArg[0] + '/',
+  path: '/api/films/' + consoleArg[0] + '/',
   method: 'GET'
 }
 
@@ -29,9 +29,10 @@ const req = https.request(options, res => {
   console.log(`statusCode: ${res.statusCode}`)
 
   res.on('data', d => {
-    process.stdout.write(d)
+    process.stdout.write(d);
   })
 })
+
 
 req.on('error', error => {
   console.error(error)
