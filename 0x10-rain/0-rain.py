@@ -12,7 +12,7 @@ def rain(walls):
         return 0
 
     res = 0
-    n = range(walls)
+    n = len(walls)
 
     for i in range(1, n-1):
         left = walls[i]
@@ -28,6 +28,3 @@ def rain(walls):
         res = res + (min(left, right) - walls[i])
 
     return res
-
-
-if __name__ == "__main__":
