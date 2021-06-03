@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- * swap - entry to swap
- * Desc: swap function that swaps two positions
- * @array1: array1
- * @array2: array2
+ * swaping - entry to swap
+ * Desc: swaping function that swaps two positions
+ * @a: array1
+ * @b: array2
  * Return: is a void
  */
 void swaping(int *a, int *b)
@@ -17,8 +17,8 @@ void swaping(int *a, int *b)
 }
 
 /**
- * heap - entry to heap
- * Desc: function that makes array into a heap
+ * heapify - entry to heap
+ * Desc: heapify function that makes array into a heap
  * @array: pointer to an int array
  * @size: size of the array
  * @i: max point
