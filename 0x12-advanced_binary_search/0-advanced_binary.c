@@ -29,12 +29,13 @@ void print_array(int *array, int start, int end)
  * @i: int type index 0 in array
  * @j: int type last index in array
  * @value: int value tu search
+ * Return: printed sorted array or -1
  */
 int sort_search(int *array, int i, int j, int value)
 {
 	int middle;
 
-	middle = (j + i)/ 2;
+	middle = (j + i) / 2;
 
 	if (i > j)
 		return (-1);
@@ -47,7 +48,7 @@ int sort_search(int *array, int i, int j, int value)
 		j = middle;
 
 	if (array[i] == value && i == middle)
-		return(i);
+		return (i);
 
 	return (sort_search(array, i, j, value));
 }
