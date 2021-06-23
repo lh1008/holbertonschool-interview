@@ -37,8 +37,8 @@ void heapify(binary_tree_t *root)
 }
 
 /**
- * get_num_nodes - entry to get num nodes
- * Desc: get_num_nodes function to the  nodes of heap tree
+ * get_nodes - entry to get num nodes
+ * Desc: get_nodes function to the  nodes of heap tree
  * @root: double pointer to the root node of the heap
  * Return: nodes in heap tree
  */
@@ -89,8 +89,6 @@ binary_tree_t *get_node_end(heap_t *root)
  * the root node of a Max Binary Heap
  * @root: double pointer to the root node of the heap
  * Return: value stored in the root node, 0 if it fails
- * https://algorithmtutor.com/Data-Structures/Tree/Binary-Heaps/
- * https://www.programiz.com/dsa/heap-data-structure
  */
 int heap_extract(heap_t **root)
 {
