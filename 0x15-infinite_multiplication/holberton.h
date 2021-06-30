@@ -4,8 +4,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
-int mult(long long a, long long b);
 int _putchar(char c);
+int _isdigit(char *n);
+int _strlen(char *s);
+char *infinite_multiply(char *s1, char *s2);
 
 #endif /* HOLBERTON_H */

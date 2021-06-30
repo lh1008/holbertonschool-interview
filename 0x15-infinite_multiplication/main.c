@@ -1,6 +1,11 @@
 #include "holberton.h"
 
-
+/**
+ * _strlen - entry to strlen
+ * Desc: _strlen function to know the length of a string
+ * @s: pointer to string
+ * Return: string length with count
+ */
 int _strlen(char *s)
 {
 	int count = 0;
@@ -13,7 +18,14 @@ int _strlen(char *s)
 	return (count);
 }
 
-int long_number(char first_argv[], char second_argv[])
+/**
+ * long_number - entry to long number
+ * Desc: long_number function that prints long numbers
+ * @first_argv: pointer to first argument
+ * @second_argv: pointer to second argument
+ * Return: --- missing what will it return
+ */
+int long_number(char *first_argv, char *second_argv)
 {
 	int x = _strlen(first_argv), y = _strlen(second_argv), a = 0;
 
@@ -46,7 +58,8 @@ int long_number(char first_argv[], char second_argv[])
  * @argc: number of arguments
  * @argv: arguments
  * Return: multiplied numbers
- * https://www.geeksforgeeks.org/how-to-store-a-very-large-number-of-more-than-100-digits-in-c/
+ * https://www.geeksforgeeks.org/how-to-store-a-very-
+ * large-number-of-more-than-100-digits-in-c/
  */
 int main(int argc, char *argv[])
 {
