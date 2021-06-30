@@ -4,7 +4,7 @@
  * _isdigit - entry to isdigit
  * Desc: _isdigit function to now if in the string
  * there are characters
- * @n: pointer to string
+ * @s: pointer to string
  * Return: 1 if only digits 0 if there's a character
  */
 int _isdigit(char *s)
