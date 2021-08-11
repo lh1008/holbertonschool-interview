@@ -15,9 +15,9 @@
  */
 typedef struct List
 {
-  char *str;
-  struct List *prev;
-  struct List *next;
+	char *str;
+	struct List *prev;
+	struct List *next;
 } List;
 
 /* New node function of a double circular linked list */
