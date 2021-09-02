@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * is_avl - entry to function
+ * check_avl - entry to function
  * Desc: check_avl function check recursively if it's a AVL tree
  * @tree: pointer to current root
  * @min: current min val
