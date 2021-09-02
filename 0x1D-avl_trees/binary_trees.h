@@ -1,6 +1,12 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+#include <stddef.h>
+#include <limits.h>
+
+#define MAX(x, y) ((x) > (y) ? (x) : (y))
+#define ABS(x) ((x) > 0 ? (x) : (-(x)))
+
 /* Basic Binary Tree */
 
 /**
