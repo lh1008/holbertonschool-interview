@@ -13,9 +13,16 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    
+
     t = [[1]]
     for j in range(1, n):
-        prev = t[-1]
-        t.append([1] + [prev[i]+prev[i+1] for i in range(len(prev)-1)] + [1])
+        t.append([])
+
+        for mv in range(j + 1):
+
+            if mv == 0 or mv == j:
+                t[j].append(1)
+
+            else:
+                t[j].append(t[j - 1][mv - 1] + t[j - 1][mv])
     return t
