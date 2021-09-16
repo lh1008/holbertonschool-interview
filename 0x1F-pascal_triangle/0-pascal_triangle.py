@@ -2,7 +2,6 @@
 """
 Module for Pascal's Triangle
 """
-from math import factorial
 
 
 def pascal_triangle(n):
