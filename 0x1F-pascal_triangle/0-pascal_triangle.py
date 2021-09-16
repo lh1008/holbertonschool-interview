@@ -11,6 +11,9 @@ def pascal_triangle(n):
     of integers representing the Pascal's
     triangle of n
     """
+    if n <= 0:
+        return []
+    
     t = [[1]]
     for j in range(1, n):
         prev = t[-1]
