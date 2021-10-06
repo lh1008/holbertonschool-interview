@@ -2,25 +2,49 @@
 """ Module for a Prime Game """
 
 
+def prime_colander(nums):
+    """
+    Method to discard NO prime number
+    """
+    n = max(nums)
+    sieve = [True for _ in range(max(n + 1, 2))]
+    for i in range(2, int(pow(n, 0.5)) + 1):
+        if not sieve[i]:
+            continue
+        for j in range(i*i, n + 1, i):
+            sieve[j] = False
+
+    sieve[0] = sieve[1] = False
+    return sieve
+
+
+def primer_multiple_colander(sieve):
+    """
+    Method to discard all multiples of prime numbers
+    """
+    c = 0
+    for i in range(len(sieve)):
+        if sieve[i]:
+            c += 1
+        sieve[i] = c
+
+    return sieve
+
+
 def isWinner(x, nums):
     """
-    Method to play the Prime round game
+    Method toDetermine if Maria or Ben win the prime game
     """
-    print(x)
+    if not nums or x < 1:
+        return None
+    sieve = prime_colander(nums)
+    sieve = primer_multiple_colander(sieve)
 
-    # itirate a list
-    for i in nums:
-        if i > 1:
-            for j in range(2, i):
-                if (i % j) == 0:
-                    print(i, "is not a prime number")
-                    print(j, "times", i//j, "is", i)
-                    break
-            else:
-                print(i, "is a prime number")
-        else:
-            print(i)
-
-
-
-# https://www.tutorialspoint.com/prime-or-not-in-python
+    player1 = 0
+    for n in nums:
+        player1 += sieve[n] % 2 == 1
+    if player1 * 2 == len(nums):
+        return None
+    if player1 * 2 > len(nums):
+        return "Maria"
+    return "Ben"
